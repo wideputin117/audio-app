@@ -68,37 +68,37 @@ const AudioRecorder = () =>{
       };
     return (
         
-        <div className="audio-controls">
-            <div className="mt-10">
+         <div className="audio-controls background h-screen w-fit">
+            <div className="mt-10 border-spacing-1 w-fit m-auto">
                 <h1 className="font-bold text-center text-6xl">Audio Recorder</h1>
             </div>
       <Card className="w-96 ml-auto mr-auto mt-20"> 
-    {!permission ? (
-    <Button onClick={getMicrophonePermission} type="button">
-        Get Microphone
-    </Button>
-    ) : null}
-    {permission && recordingStatus === "inactive" ? (
-    <Button onClick={startRecording} type="button">
-        Start Recording
-    </Button>
-    ) : null}
-    {recordingStatus === "recording" ? (
-    <Button onClick={stopRecording} type="button">
-        Stop Recording
-    </Button>
-    ) : null}
+             {!permission ? (
+            <Button onClick={getMicrophonePermission} type="button">
+                Get Microphone
+            </Button>) : null}
 
-{audio ? (
-    <div className="audio-container border-double p-l-10">
-       <audio src={audio} controls='true'></audio>
-       <a download href={audio}>
-          Download Recording
-        </a>
+            {permission && recordingStatus === "inactive" ? (
+            <Button onClick={startRecording} type="button">
+                Start Recording
+            </Button>
+              ) : null}
+            {recordingStatus === "recording" ? (
+            <Button onClick={stopRecording} type="button">
+                Stop Recording
+            </Button>
+              ) : null}
+
+        {audio ? (
+            <div className="audio-container border-double p-l-10">
+              <audio src={audio} controls='true'></audio>
+                <a download href={audio}>
+                    Download Recording
+                </a>
+            </div>
+             ) : null}
+          </Card>
         </div>
-    ) : null}
-    </Card>
-    </div>
      
     )
 

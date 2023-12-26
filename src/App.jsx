@@ -1,15 +1,18 @@
 
-import AudioRecorder from "./components/Audio"
-
+import AudioRecorder from "./components/Audio";
 
 function App() {
    
 
   return (
     
-      <div> 
-        <AudioRecorder />
-      </div>
+       
+        <div>
+          <AudioRecorder />
+        </div> 
+         
+     
+    
       )
 }
 
