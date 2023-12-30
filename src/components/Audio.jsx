@@ -67,8 +67,8 @@ const AudioRecorder = () =>{
         };
       };
     return (
-        
-         <div className="audio-controls background h-screen w-fit">
+        <section className="background"> 
+         <div className="audio-controls background h-screen">
             <div className="mt-10 border-spacing-1 w-fit m-auto">
                 <h1 className="font-bold text-center text-6xl">Audio Recorder</h1>
             </div>
@@ -99,6 +99,7 @@ const AudioRecorder = () =>{
              ) : null}
           </Card>
         </div>
+    </section>
      
     )
 
